@@ -1,5 +1,5 @@
 import React from 'react'
-
+import bg from './bg.jpeg'
 
 import { Link } from 'react-router-dom';
 
@@ -296,8 +296,9 @@ const locationData = [
 
 const Cards = () => {
   return (
-    <>
-    <h1 className='text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl text-center mt-[30px] mb-[50px]'>OUR TOWERS</h1>
+    <div className='relative'>
+    <img src={bg} className='object-cover z-[-1] opacity-25 absolute w-[100%] h-[100%]' alt="" />
+    <h1 className='text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl text-center py-[50px]'>OUR TOWERS</h1>
     <div className="container mx-auto grid  grid-cols-4 gap-4">
       {locationData.map((location, index) => (
         <Link to={`/map/${location.lat}/${location.long}`}key={index} className="card border-[1px] border-black cursor-pointer hover:scale-90 duration-500 rounded shadow-lg p-4">
@@ -305,7 +306,7 @@ const Cards = () => {
         </Link>
       ))}
     </div>
-    </>
+    </div>
   )
 }
 
