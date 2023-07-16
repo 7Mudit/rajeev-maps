@@ -10,10 +10,10 @@ const HomePage = () => {
         muted
         loop
         className="absolute z-[100]  top-[0] left-[0] 
-      h-full w-[100vw] "
+      h-full w-full object-cover"
       ></video>
       {/* navbar */}
-      <div className="w-[100vw] h-[100vh] relative flex items-center flex-col">
+      <div className="w-full h-screen relative flex items-center flex-col">
         <div className="w-[80%] z-[1000] relative py-[50px] flex flex-row justify-center items-center gap-5 mx-auto">
           <img src={logo} alt="" />
           <div className="flex flex-row font-bold gap-8 pl-[30px] items-end h-[100px]">
